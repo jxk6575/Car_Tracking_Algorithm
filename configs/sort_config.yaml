@@ -1,0 +1,4 @@
+# SORT tracker configuration
+max_age: 1          # Maximum number of frames to keep alive a track without associated detections
+min_hits: 3         # Minimum number of associated detections before track is initialized
+iou_threshold: 0.3  # Minimum IOU for match

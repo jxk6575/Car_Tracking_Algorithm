@@ -1,1 +1,163 @@
-# Car_Tracking_Algorithm
+# Car Tracking Algorithms
+
+Implementation and comparison of different car tracking algorithms: SORT, DeepSORT, and ByteTrack.
+
+## Latest Updates
+- ✅ Fixed tracker initialization issues
+- ✅ Improved config file handling
+- ✅ Added proper error handling for video loading
+- ✅ Enhanced parameter passing to trackers
+
+## Latest Performance Results
+
+### Tracker Comparison (1500 frames)
+| Tracker | Config | FPS | Tracks/Frame | Detection (ms) | Tracking (ms) |
+|---------|--------|-----|--------------|----------------|---------------|
+| ByteTrack | sort_config.yaml | 6.45 | 7.36 | 151.45 | 3.54 |
+| DeepSORT | sort_config.yaml | 3.59 | 5.08 | 141.25 | 137.00 |
+| SORT | sort_config.yaml | 34.87 | 4.62 | 17.49 | 11.19 |
+
+### Key Findings
+- SORT achieves highest FPS (34.87) with simple detector
+- ByteTrack maintains most consistent tracking (avg 7.36 tracks)
+- DeepSORT shows balanced performance with feature matching
+- All trackers successfully processed 1500 frames
+
+### Recent Updates
+- ✅ Added multi-tracker comparison visualization
+- ✅ Implemented real-time performance metrics
+- ✅ Enhanced tracker initialization
+- ✅ Improved visualization system
+- ✅ Added comprehensive results analysis
+
+## Features
+- ✅ Three tracking algorithms implemented:
+  - SORT (Simple Online and Realtime Tracking)
+  - DeepSORT (Deep Learning enhanced SORT)
+  - ByteTrack (State-of-the-art tracking)
+- ✅ Multiple detector options:
+  - Simple detector (background subtraction)
+  - YOLOv8 detector
+  - ByteYOLO detector (optimized for ByteTrack)
+- ✅ Real-time visualization
+- ✅ Configurable parameters via YAML
+- ✅ Interactive demo application
+
+## Installation
+
+1. Clone the repository:
+
+```bash
+git clone https://github.com/yourusername/Car_Tracking_Algorithms.git
+cd Car_Tracking_Algorithms
+```
+
+2. Install dependencies:
+
+```bash
+pip install -r requirements.txt
+pip install ultralytics  # For YOLOv8 detector
+
+```
+
+## Project Setup
+
+1. Create required directories:
+
+```bash
+mkdir -p data/datasets
+mkdir -p data/models
+mkdir -p data/outputs
+
+```
+
+2. Add video files:
+- Place your video files in `data/datasets/`
+- Supported formats: .avi, .mp4
+
+3. Verify configurations:
+- Check that config files exist in `configs/`
+- Verify parameters in config files
+
+## Running the Demo
+
+1. From project root directory:
+
+```bash
+python demo/demo.py
+
+```
+
+2. Follow the interactive prompts to:
+- Select tracking configuration (SORT, DeepSORT, or ByteTrack)
+- Select input video
+
+3. View results:
+- Real-time tracking visualization will be shown
+- Processed video will be saved to `data/outputs/`
+- Press 'q' to quit the demo
+
+## Tracking Methods
+
+### SORT
+- Simple and fast tracking
+- Uses Kalman filter for motion prediction
+- IoU-based matching
+- Best for simple scenarios with clear visibility
+
+### DeepSORT
+- Enhanced tracking with deep learning features
+- Better identity preservation
+- Uses YOLOv8 for detection
+- Good balance of speed and accuracy
+
+### ByteTrack
+- State-of-the-art performance
+- Handles low-confidence detections
+- Advanced state estimation
+- Best for complex scenarios
+
+## Configuration
+
+Each tracker has its own configuration file in `configs/`:
+- `sort_config.yaml`
+- `deep_sort_config.yaml`
+- `byte_track_config.yaml`
+
+Key parameters can be adjusted in these files.
+
+## Project Structure
+```
+Car_Tracking_Algorithms/
+├── configs/           # Configuration files
+├── data/             # Data storage
+│   ├── datasets/     # Input videos
+│   ├── models/       # Model weights
+│   └── outputs/      # Processed videos
+├── demo/             # Demo application
+├── src/              # Source code
+│   ├── trackers/     # Tracker implementations
+│   └── utils/        # Shared utilities
+└── tests/            # Test suite
+```
+
+## Troubleshooting
+
+If you encounter issues:
+1. Verify all dependencies are installed
+2. Check video file exists in data/datasets
+3. Ensure you're running from project root
+4. Verify config files exist in configs directory
+5. Check that data/outputs directory exists for saving results
+
+## Contributing
+
+1. Fork the repository
+2. Create your feature branch
+3. Commit your changes
+4. Push to the branch
+5. Create a new Pull Request
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.

@@ -1,0 +1,68 @@
+Project Structure:
+-----------------
+C:\Users\jxk33\Desktop\code\Car_Tracking_Algorithms
+C:\Users\jxk33\Desktop\code\Car_Tracking_Algorithms\configs
+├── byte_track_config.yaml
+├── deep_sort_config.yaml
+└── sort_config.yaml
+C:\Users\jxk33\Desktop\code\Car_Tracking_Algorithms\data
+C:\Users\jxk33\Desktop\code\Car_Tracking_Algorithms\data\datasets
+├── cctv1.avi
+└── hdcctv.mp4
+C:\Users\jxk33\Desktop\code\Car_Tracking_Algorithms\data\models
+├── ckpt.t7
+└── ckpt.t77n531a1x.part
+C:\Users\jxk33\Desktop\code\Car_Tracking_Algorithms\data\outputs
+├── comparison_cctv1.avi
+├── comparison_hdcctv.mp4
+├── deepsort_cctv1.avi
+├── deepsort_hdcctv.mp4
+├── sort_cctv1.avi
+└── tracked_cctv1.avi
+C:\Users\jxk33\Desktop\code\Car_Tracking_Algorithms\data\results
+└── tracker_comparison_20241202_011010.csv
+C:\Users\jxk33\Desktop\code\Car_Tracking_Algorithms\demo
+└── demo.py
+C:\Users\jxk33\Desktop\code\Car_Tracking_Algorithms\src
+C:\Users\jxk33\Desktop\code\Car_Tracking_Algorithms\src\evaluation
+├── __init__.py
+└── metrics.py
+C:\Users\jxk33\Desktop\code\Car_Tracking_Algorithms\src\trackers
+C:\Users\jxk33\Desktop\code\Car_Tracking_Algorithms\src\trackers\byte_track
+├── __init__.py
+└── byte_tracker.py
+C:\Users\jxk33\Desktop\code\Car_Tracking_Algorithms\src\trackers\deep_sort
+├── __init__.py
+├── deep_sort_tracker.py
+└── feature_extractor.py
+C:\Users\jxk33\Desktop\code\Car_Tracking_Algorithms\src\trackers\sort
+├── __init__.py
+└── sort_tracker.py
+├── __init__.py
+└── base_tracker.py
+C:\Users\jxk33\Desktop\code\Car_Tracking_Algorithms\src\utils
+├── __init__.py
+├── bbox.py
+├── byte_yolo_detector.py
+├── detection.py
+├── detector.py
+├── visualization.py
+└── yolo_detector.py
+└── __init__.py
+C:\Users\jxk33\Desktop\code\Car_Tracking_Algorithms\tests
+├── __init__.py
+└── test_trackers.py
+C:\Users\jxk33\Desktop\code\Car_Tracking_Algorithms\tools
+├── compare_trackers.py
+├── create_structure.py
+├── download_models.py
+├── evaluate.py
+├── print_structure.py
+├── train.py
+└── visualize.py
+├── __init__.py
+├── Details.md
+├── project_structure.txt
+├── README.md
+├── requirements.txt
+└── setup.py

@@ -1,0 +1,6 @@
+# DeepSORT tracker configuration
+max_age: 30          # Increase from 1 to allow longer coasting
+min_hits: 3         # Keep minimum hits reasonable
+iou_threshold: 0.3  # Keep IOU threshold
+feature_threshold: 0.3  # Lower feature similarity threshold
+confidence_threshold: 0.3  # Add lower confidence threshold
