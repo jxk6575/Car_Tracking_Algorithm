@@ -1,0 +1,4 @@
+tracker,config,avg_fps,avg_num_tracks,avg_det_time,avg_track_time,total_frames
+ByteTracker,byte_track_config.yaml,11.012802641288575,5.1937984496124034,89.06416929969492,1.7392376596613446,129
+DeepSORTTracker,deep_sort_config.yaml,8.928258064457271,0.0,112.00393097741264,0.0,28
+SORTTracker,sort_config.yaml,67.98808592721069,2.4375,8.46397876739502,6.244480609893799,16
