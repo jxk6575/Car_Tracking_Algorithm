@@ -4,23 +4,46 @@ C:\Users\jxk33\Desktop\code\Car_Tracking_Algorithms
 C:\Users\jxk33\Desktop\code\Car_Tracking_Algorithms\configs
 ├── byte_track_config.yaml
 ├── deep_sort_config.yaml
+├── hybrid_tracker_config.yaml
 └── sort_config.yaml
 C:\Users\jxk33\Desktop\code\Car_Tracking_Algorithms\data
 C:\Users\jxk33\Desktop\code\Car_Tracking_Algorithms\data\datasets
-├── cctv1.avi
+├── cctv.avi
+├── dashcam1.mp4
+├── dashcam2.mp4
 └── hdcctv.mp4
 C:\Users\jxk33\Desktop\code\Car_Tracking_Algorithms\data\models
+├── car1.pt
 ├── ckpt.t7
 └── ckpt.t77n531a1x.part
 C:\Users\jxk33\Desktop\code\Car_Tracking_Algorithms\data\outputs
+├── byte_cctv.avi
+├── byte_dashcam1.mp4
+├── byte_hdcctv.mp4
+├── comparison_cctv.avi
 ├── comparison_cctv1.avi
+├── comparison_dashcam1.mp4
+├── comparison_dashcam2.mp4
 ├── comparison_hdcctv.mp4
+├── deepsort_cctv.avi
 ├── deepsort_cctv1.avi
+├── deepsort_dashcam1.mp4
 ├── deepsort_hdcctv.mp4
 ├── sort_cctv1.avi
+├── sort_dashcam1.mp4
+├── sort_hdcctv.mp4
 └── tracked_cctv1.avi
 C:\Users\jxk33\Desktop\code\Car_Tracking_Algorithms\data\results
-└── tracker_comparison_20241202_011010.csv
+├── tracker_comparison_20241202_011010.csv
+├── tracker_comparison_20241202_081056.csv
+├── tracker_comparison_20241202_082059.csv
+├── tracker_comparison_20241202_082622.csv
+├── tracker_comparison_20241202_082854.csv
+├── tracker_comparison_20241202_084135.csv
+├── tracker_comparison_20241204_162557.csv
+├── tracker_comparison_20241204_162830.csv
+├── tracker_comparison_20241204_162945.csv
+└── tracker_comparison_20241217_210631.csv
 C:\Users\jxk33\Desktop\code\Car_Tracking_Algorithms\demo
 └── demo.py
 C:\Users\jxk33\Desktop\code\Car_Tracking_Algorithms\src
@@ -35,6 +58,9 @@ C:\Users\jxk33\Desktop\code\Car_Tracking_Algorithms\src\trackers\deep_sort
 ├── __init__.py
 ├── deep_sort_tracker.py
 └── feature_extractor.py
+C:\Users\jxk33\Desktop\code\Car_Tracking_Algorithms\src\trackers\hybrid_track
+├── __init__.py
+└── hybrid_tracker.py
 C:\Users\jxk33\Desktop\code\Car_Tracking_Algorithms\src\trackers\sort
 ├── __init__.py
 └── sort_tracker.py
@@ -46,6 +72,7 @@ C:\Users\jxk33\Desktop\code\Car_Tracking_Algorithms\src\utils
 ├── byte_yolo_detector.py
 ├── detection.py
 ├── detector.py
+├── hybrid_yolo_detector.py
 ├── visualization.py
 └── yolo_detector.py
 └── __init__.py
@@ -57,6 +84,7 @@ C:\Users\jxk33\Desktop\code\Car_Tracking_Algorithms\tools
 ├── create_structure.py
 ├── download_models.py
 ├── evaluate.py
+├── evaluate_performance.py
 ├── print_structure.py
 ├── train.py
 └── visualize.py
