@@ -12,17 +12,17 @@ Implementation and comparison of different car tracking algorithms: SORT, DeepSO
 ## Latest Performance Results
 
 ### Tracker Comparison (1500 frames)
-| Tracker | FPS | Tracks/Frame | Detection (ms) | Tracking (ms) |
+|   Tracker   |  FPS  | Tracks/Frame | Detection (ms) | Tracking (ms) |
 
-|---------|--------|-----|--------------|----------------|---------------|
+|-------------|-------|--------------|----------------|---------------|
 
-| ByteTrack | 6.45 | 7.36 | 151.45 | 3.54 |
+|  ByteTrack  |  6.45 |     7.36     |     151.45     |      3.54     |
 
-| DeepSORT | 3.59 | 5.08 | 141.25 | 137.00 |
+|   DeepSORT  |  3.59 |     5.08     |     141.25     |    137.00     |
 
-| SORT | 34.87 | 4.62 | 17.49 | 11.19 |
+|    SORT     | 34.87 |     4.62     |      17.49     |     11.19     |
 
-| HybridTrack | 19.53 | 4.78 | 49.84 | 1.38 |
+| HybridTrack | 19.53 |     4.78     |      49.84     |      1.38     |
 
 ### Key Findings
 - HybridTrack achieves balanced performance between speed and accuracy
