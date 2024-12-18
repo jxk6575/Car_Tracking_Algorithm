@@ -2,6 +2,8 @@ import argparse
 from pathlib import Path
 import yaml
 import numpy as np
+import cv2
+import time
 
 from src.trackers import SORTTracker, ByteTracker
 from src.evaluation.metrics import calculate_metrics
@@ -52,6 +54,56 @@ def evaluate_tracker(tracker, data_path: str, output_path: str = None):
         np.save(output_path, all_tracks)
         
     return overall_metrics
+
+def evaluate_tracker_performance(tracker, detector, video_path, num_frames=1500):
+    """Evaluate tracker performance metrics."""
+    cap = cv2.VideoCapture(str(video_path))
+    
+    total_time = 0
+    total_det_time = 0
+    total_track_time = 0
+    total_tracks = 0
+    frame_count = 0
+    
+    while frame_count < num_frames:
+        ret, frame = cap.read()
+        if not ret:
+            break
+            
+        start_time = time.time()
+        
+        # Detection time
+        det_start = time.time()
+        detections = detector.detect(frame)
+        det_time = time.time() - det_start
+        
+        # Tracking time
+        track_start = time.time()
+        tracks = tracker.update(detections)
+        track_time = time.time() - track_start
+        
+        frame_time = time.time() - start_time
+        
+        total_time += frame_time
+        total_det_time += det_time
+        total_track_time += track_time
+        total_tracks += len(tracks)
+        frame_count += 1
+    
+    cap.release()
+    
+    # Calculate metrics
+    avg_fps = frame_count / total_time
+    avg_tracks = total_tracks / frame_count
+    avg_det_time = (total_det_time / frame_count) * 1000  # Convert to ms
+    avg_track_time = (total_track_time / frame_count) * 1000  # Convert to ms
+    
+    return {
+        'avg_fps': avg_fps,
+        'avg_num_tracks': avg_tracks,
+        'avg_det_time': avg_det_time,
+        'avg_track_time': avg_track_time
+    }
 
 def main():
     parser = argparse.ArgumentParser()
