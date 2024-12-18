@@ -1,7 +1,6 @@
 # ByteTrack configuration
-max_age: 30          # Increase from 1 to 30 for better track persistence
-min_hits: 3          # Keep at 3 for reasonable track initialization
-iou_threshold: 0.3   # Keep at 0.3 for good matching
-low_thresh: 0.05     # Lower the low detection confidence threshold
-high_thresh: 0.3     # Lower the high detection confidence threshold
-yolo_model: 'yolov8n.pt'  # Add YOLOv8 model specification
+max_age: 1          # Maximum number of frames to keep alive a track without associated detections
+min_hits: 3         # Minimum number of associated detections before track is initialized
+iou_threshold: 0.3  # Minimum IOU for match
+low_thresh: 0.1     # Low detection confidence threshold
+high_thresh: 0.5    # High detection confidence threshold

@@ -1,0 +1,7 @@
+# Hybrid tracker configuration
+max_age: 30
+min_hits: 3
+iou_threshold: 0.3
+confidence_threshold: 0.3
+kalman_weight: 0.3
+yolo_model: 'data/models/car1.pt'
