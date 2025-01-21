@@ -1,13 +1,18 @@
 # Car Tracking Algorithms
 
+[![Python 3.12](https://img.shields.io/badge/python-3.12-blue.svg)](https://www.python.org/downloads/release/python-3120/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![OpenCV](https://img.shields.io/badge/OpenCV-4.8.0-red.svg)](https://opencv.org/)
+[![YOLOv8](https://img.shields.io/badge/YOLOv8-8.0.196-green.svg)](https://github.com/ultralytics/yolov8)
+
 Implementation and comparison of different car tracking algorithms: SORT, DeepSORT, ByteTrack, and HybridTrack.
 
-## Latest Updates
-- ✅ Added new HybridTrack algorithm combining strengths of existing trackers
-- ✅ Implemented enhanced detection filtering
-- ✅ Added robust track management system
-- ✅ Improved visualization with consistent bounding boxes
-- ✅ Enhanced feature extraction for better tracking
+## Overview
+
+This project provides a comprehensive framework for tracking vehicles in video streams using state-of-the-art tracking algorithms. It includes implementations of SORT, DeepSORT, ByteTrack, and a custom HybridTrack algorithm.
+
+![image](https://github.com/user-attachments/assets/fe8e9e69-1e82-4496-b407-209b4df8d30f)
+![image](https://github.com/user-attachments/assets/2a29e146-843d-4148-a7fe-e27f99573a61)
 
 ## Latest Performance Results
 
@@ -211,3 +216,15 @@ Our HybridTrack algorithm successfully combines the strengths of three leading t
 - Sequential ID assignment (1,2,3...)
 - Stable bounding boxes
 - Efficient computation (~20 FPS)
+
+## Contributing
+
+1. Fork the repository.
+2. Create your feature branch.
+3. Commit your changes.
+4. Push to the branch.
+5. Create a new Pull Request.
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
